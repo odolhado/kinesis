@@ -1,4 +1,5 @@
 import { createServer } from 'node:http';
+import 'reflect-metadata';
 
 const server = createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
