@@ -1,3 +1,5 @@
 /.idea
-
 kinesis.iml
+
+/dist
+/node_modules

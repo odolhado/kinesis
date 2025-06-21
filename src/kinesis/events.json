@@ -1,0 +1,348 @@
+[
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {},
+    "createdAt": 1647945426109,
+    "eventId": "fpCjY8GhaQjuzpcqkaCk",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "jurisdiction": "SGA",
+      "userId": "VijPYTEOgK7dxLs5fBjJ"
+    },
+    "sequenceNumber": 1,
+    "source": "limitUser",
+    "type": "LIMIT_USER_CREATED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {},
+    "createdAt": 1647945426170,
+    "eventId": "XDSgPxw3MQNP5rD2nRcX",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "payment": {
+        "amount": "200",
+        "currencyCode": "SEK",
+        "paymentId": "VijPYTEOgK7dxLs5fBjJ"
+      },
+      "userId": "VijPYTEOgK7dxLs5fBjJ"
+    },
+    "sequenceNumber": 2,
+    "source": "limitUser",
+    "type": "LIMIT_USER_PENDING_PAYMENT_CREATED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946090594,
+    "eventId": "HENgJu3fBmWWtVjlifo4",
+    "payload": {
+      "activeFrom": 1647946090592,
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1648032490592,
+      "period": "DAY",
+      "status": "ACTIVE",
+      "type": "DEPOSIT",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "LKMgxoE0yFgH6F6iShEu",
+      "value": "10000"
+    },
+    "sequenceNumber": 3,
+    "source": "limitUser",
+    "type": "USER_LIMIT_CREATED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946090760,
+    "eventId": "hZY4UzCNn60FAuoDHMCQ",
+    "payload": {
+      "activeFrom": 1647946090760,
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1648550890760,
+      "period": "WEEK",
+      "status": "ACTIVE",
+      "type": "DEPOSIT",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "0w2KzcVUkZcb6n2z4DcE",
+      "value": "50000"
+    },
+    "sequenceNumber": 4,
+    "source": "limitUser",
+    "type": "USER_LIMIT_CREATED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946090824,
+    "eventId": "Qqko31j8InLTSeA5smpC",
+    "payload": {
+      "activeFrom": 1647946090824,
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1650624490824,
+      "period": "MONTH",
+      "status": "ACTIVE",
+      "type": "DEPOSIT",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "jIcDgFDxkhM2qRWFrwVn",
+      "value": "250000"
+    },
+    "sequenceNumber": 5,
+    "source": "limitUser",
+    "type": "USER_LIMIT_CREATED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946101223,
+    "eventId": "G5xplaPbCdVQ4CmZZYgg",
+    "payload": {
+      "amount": "200",
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1648032490592,
+      "previousProgress": "0",
+      "remainingAmount": "9800.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "LKMgxoE0yFgH6F6iShEu"
+    },
+    "sequenceNumber": 6,
+    "source": "limitUser",
+    "type": "USER_LIMIT_PROGRESS_CHANGED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946101299,
+    "eventId": "EIMzqQFUsPYLjtFx1DOa",
+    "payload": {
+      "amount": "200",
+      "brandId": "000000000000000000000001",
+      "expiresAt": 1648032490592,
+      "period": "DAY",
+      "sourceId": "VijPYTEOgK7dxLs5fBjJ",
+      "type": "DEPOSIT",
+      "userId": "VijPYTEOgK7dxLs5fBjJ"
+    },
+    "sequenceNumber": 7,
+    "source": "limitUser",
+    "type": "USER_LIMIT_CHANGE_SOURCE_ADDED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946101421,
+    "eventId": "jZ6dyad71tAWcjF0F1D4",
+    "payload": {
+      "amount": "200",
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1648550890760,
+      "previousProgress": "0",
+      "remainingAmount": "49800.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "0w2KzcVUkZcb6n2z4DcE"
+    },
+    "sequenceNumber": 8,
+    "source": "limitUser",
+    "type": "USER_LIMIT_PROGRESS_CHANGED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946101524,
+    "eventId": "e2jTDFMB6iuFf8lhjKCu",
+    "payload": {
+      "amount": "200",
+      "brandId": "000000000000000000000001",
+      "expiresAt": 1648550890760,
+      "period": "WEEK",
+      "sourceId": "VijPYTEOgK7dxLs5fBjJ",
+      "type": "DEPOSIT",
+      "userId": "VijPYTEOgK7dxLs5fBjJ"
+    },
+    "sequenceNumber": 9,
+    "source": "limitUser",
+    "type": "USER_LIMIT_CHANGE_SOURCE_ADDED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946101621,
+    "eventId": "dtGPSuB710ooNh293MQf",
+    "payload": {
+      "amount": "200",
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1650624490824,
+      "previousProgress": "0",
+      "remainingAmount": "249800.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "jIcDgFDxkhM2qRWFrwVn"
+    },
+    "sequenceNumber": 10,
+    "source": "limitUser",
+    "type": "USER_LIMIT_PROGRESS_CHANGED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946101859,
+    "eventId": "VtLvTcZ5EOOkeR9PLLHZ",
+    "payload": {
+      "amount": "200",
+      "brandId": "000000000000000000000001",
+      "expiresAt": 1650624490824,
+      "period": "MONTH",
+      "sourceId": "VijPYTEOgK7dxLs5fBjJ",
+      "type": "DEPOSIT",
+      "userId": "VijPYTEOgK7dxLs5fBjJ"
+    },
+    "sequenceNumber": 11,
+    "source": "limitUser",
+    "type": "USER_LIMIT_CHANGE_SOURCE_ADDED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {
+      "correlationId": "hVyFHScCNAmSyAPulhtsQ"
+    },
+    "createdAt": 1647946101979,
+    "eventId": "xy49StqjX7QrAABOmW9S",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "paymentId": "VijPYTEOgK7dxLs5fBjJ",
+      "userId": "VijPYTEOgK7dxLs5fBjJ"
+    },
+    "sequenceNumber": 12,
+    "source": "limitUser",
+    "type": "LIMIT_USER_PENDING_PAYMENT_PROCESSED"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {},
+    "createdAt": 1650624491955,
+    "eventId": "XrVtBRljEvHQp04WKQb3",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1650710890592,
+      "period": "DAY",
+      "resetAmount": "0",
+      "resetPercentage": "0.00",
+      "type": "DEPOSIT",
+      "unusedAmount": "10000.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "LKMgxoE0yFgH6F6iShEu"
+    },
+    "sequenceNumber": 235,
+    "source": "limitUser",
+    "type": "USER_LIMIT_RESET"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {},
+    "createdAt": 1650624492214,
+    "eventId": "3NA4S4bUwSygInZMRMg9",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1650970090760,
+      "period": "WEEK",
+      "resetAmount": "0",
+      "resetPercentage": "0.00",
+      "type": "DEPOSIT",
+      "unusedAmount": "50000.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "0w2KzcVUkZcb6n2z4DcE"
+    },
+    "sequenceNumber": 236,
+    "source": "limitUser",
+    "type": "USER_LIMIT_RESET"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {},
+    "createdAt": 1650624492272,
+    "eventId": "yBsXHSUpnv0GArplSZJs",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1653216490824,
+      "period": "MONTH",
+      "resetAmount": "200.00",
+      "resetPercentage": "0.08",
+      "type": "DEPOSIT",
+      "unusedAmount": "249800.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "jIcDgFDxkhM2qRWFrwVn"
+    },
+    "sequenceNumber": 237,
+    "source": "limitUser",
+    "type": "USER_LIMIT_RESET"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {},
+    "createdAt": 1650624492316,
+    "eventId": "Anbkg4WAErESb8mcM49S",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1650624545640,
+      "period": "DAY",
+      "resetAmount": "0",
+      "resetPercentage": "0.00",
+      "type": "SESSION",
+      "unusedAmount": "82800.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "O6aupKRcI6JnU89kaQkm"
+    },
+    "sequenceNumber": 238,
+    "source": "limitUser",
+    "type": "USER_LIMIT_RESET"
+  },
+  {
+    "aggregateId": "VijPYTEOgK7dxLs5fBjJ",
+    "context": {},
+    "createdAt": 1650624492353,
+    "eventId": "g0fLt1BtdNH2g5oFaubN",
+    "payload": {
+      "brandId": "000000000000000000000001",
+      "currencyCode": "SEK",
+      "nextResetTime": 1650970145685,
+      "period": "WEEK",
+      "resetAmount": "0",
+      "resetPercentage": "0.00",
+      "type": "SESSION",
+      "unusedAmount": "579600.00",
+      "userId": "VijPYTEOgK7dxLs5fBjJ",
+      "userLimitId": "avZF6PwKy1BMs2nAhxWb"
+    },
+    "sequenceNumber": 239,
+    "source": "limitUser",
+    "type": "USER_LIMIT_RESET"
+  }
+]

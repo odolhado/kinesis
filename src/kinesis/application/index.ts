@@ -1,0 +1,1 @@
+export * from "./domain/kinesis-event-type";
