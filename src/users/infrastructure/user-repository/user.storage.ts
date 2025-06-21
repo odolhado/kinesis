@@ -1,5 +1,5 @@
 import { Service, Token } from 'typedi';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, defer, Observable, of } from 'rxjs';
 import { UserContext, UsersContextPort } from '../../application/ports/users.context-port';
 
 export const IN_MEMORY_USER_STORAGE = new Token<UsersContextPort>('IN_MEMORY_USER_STORAGE');
@@ -14,16 +14,27 @@ export class InMemoryUserStorage implements UsersContextPort {
 
     console.log('>> setUserLimit::', user);
     const users = this.usersData.getValue()
+
     this.usersData.next(users);
 
     return of(void 0);
   }
 
   resetUserLimit(userId: string): Observable<void> {
-    const users = this.usersData.getValue()
     console.log('>> resetUserLimit::', userId);
 
-    return of(void 0);
+    return defer(() => {
+      const users = this.usersData.getValue();
+      const allUsers = users.all;
+
+      const user = allUsers.get(userId);
+      allUsers.set(userId, {
+        ...user,
+        previousProgress: 0
+      });
+
+      return of(this.usersData.next(allUsers));
+    });
   }
 
   private usersData: BehaviorSubject<any> =
@@ -35,20 +46,24 @@ export class InMemoryUserStorage implements UsersContextPort {
     users: UserContext[],
   ): Observable<void> {
 
-    return of(void 0);
+    return of(this.usersData.next(users));
   }
 
   setUser(
     user: UserContext,
   ): Observable<void> {
-
     console.log('>> setUser::', user);
-    const users = this.usersData.getValue()
 
-    // users.push(user.id, user.data);
-    this.usersData.next(users);
+    return defer(() => {
+      const users = this.usersData.getValue();
+      const allUsers = users.all;
 
-    return of(void 0);
+      allUsers.set(user.id, {
+        ...user.data,
+      });
+
+      return of(this.usersData.next(allUsers));
+    });
   }
 
 
