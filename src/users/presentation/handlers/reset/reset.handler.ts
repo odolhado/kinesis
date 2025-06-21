@@ -24,7 +24,7 @@ export class ResetHandler implements EventHandlerInterface<UserLimitResetPayload
     const commandService = Container.get<ResetUserLimitCommandPort>(USER_LIMIT_COMMAND);
 
     return commandService.resetUserLimit(
-      new ResetUserLimitCommand(event.payload.userId)
+      new ResetUserLimitCommand(event.payload.userId, event.payload)
     );
   }
 

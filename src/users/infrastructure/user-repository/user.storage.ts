@@ -4,7 +4,6 @@ import { UserContext, UsersContextPort } from '../../application/ports/users.con
 
 export const IN_MEMORY_USER_STORAGE = new Token<UsersContextPort>('IN_MEMORY_USER_STORAGE');
 
-
 @Service<UsersContextPort>(IN_MEMORY_USER_STORAGE)
 export class InMemoryUserStorage implements UsersContextPort {
 
@@ -37,11 +36,6 @@ export class InMemoryUserStorage implements UsersContextPort {
     });
   }
 
-  private usersData: BehaviorSubject<any> =
-    new BehaviorSubject<any>({
-      all: new Map<number, UserContext>([]),
-    });
-
   setState(
     users: UserContext[],
   ): Observable<void> {
@@ -66,8 +60,12 @@ export class InMemoryUserStorage implements UsersContextPort {
     });
   }
 
-
   selectAll(): Observable<UserContext[]>{
-    return this.usersData.getValue();
+    return this.usersData.asObservable();
   }
+
+  private usersData: BehaviorSubject<any> =
+    new BehaviorSubject<any>({
+      all: new Map<number, UserContext>([]),
+    });
 }

@@ -10,3 +10,4 @@ NodeJS project taking stream of events from AWS Kinesis and changing database
 ## run 
 `npm start`
 
+![img.png](img.png)
