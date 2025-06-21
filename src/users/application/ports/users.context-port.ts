@@ -1,5 +1,4 @@
 import { Observable } from 'rxjs';
-import { Token } from 'typedi';
 
 export interface UserContext {
   id: string;

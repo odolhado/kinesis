@@ -68,8 +68,6 @@ export class InMemoryUserStorage implements UsersContextPort {
 
 
   selectAll(): Observable<UserContext[]>{
-    // return this.usersData.getValue();
-
-    return of([]);
+    return this.usersData.getValue();
   }
 }
