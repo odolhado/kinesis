@@ -1,16 +1,10 @@
 import 'reflect-metadata';
 import { createServer, Server } from 'node:http';
-import { Container } from 'typedi';
-import { type EventBusInterface } from './event-bus/application';
-import { EVENT_BUS } from './event-bus/application/state/event-bus.state';
-import { registerEventHandlers } from './app/application/app';
-import { subscribeToKinesisStream } from './kinesis/infrastructure/utils/create-stream';
+import { AppModule } from './app/application/app';
 
 async function bootstrap(): Promise<Server> {
-  const eventBus: EventBusInterface = Container.get<EventBusInterface>(EVENT_BUS);
 
-  registerEventHandlers(eventBus);
-  subscribeToKinesisStream(eventBus);
+  AppModule.init();
 
   const server = createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
