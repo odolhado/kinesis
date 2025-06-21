@@ -2,12 +2,12 @@ import { Observable } from 'rxjs';
 import { Token } from 'typedi';
 
 export interface CreateUserLimitCommandPort {
-  createLimit(command: CreateUserLimitCommand): Observable<void>;
+  createUserLimit(command: CreateUserLimitCommand): Observable<void>;
 }
 
-export const CREATE_USER_LIMIT_COMMAND = new Token<CreateUserLimitCommandPort>(
-  'CREATE_USER_LIMIT_COMMAND',
-);
+// export const CREATE_USER_LIMIT_COMMAND = new Token<CreateUserLimitCommandPort>(
+//   'CREATE_USER_LIMIT_COMMAND',
+// );
 
 export class CreateUserLimitCommand {
   constructor(

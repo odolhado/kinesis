@@ -4,8 +4,8 @@ import { UserHandlersModule } from '../../users/presentation/handlers/user-handl
 import { EVENT_BUS } from '../../event-bus/application/state/event-bus.state';
 import { subscribeToKinesisStream } from '../../kinesis/infrastructure/utils/create-stream';
 
-
 export class AppModule {
+
   static init(): void {
     const eventBus: EventBusInterface = Container.get<EventBusInterface>(EVENT_BUS);
 

@@ -5,13 +5,12 @@ export interface BaseEvent {
   };
   createdAt: number;
   eventId: string;
-  payload: any; // make it generic | union
+  payload: any; // TODO:: make it generic | union
   sequenceNumber: number;
   source: string;
   type: KinesisEventType;
 }
 
-// Enum of all event types found in the file
 export enum KinesisEventType {
   USER_LIMIT_CREATED = 'USER_LIMIT_CREATED',
   LIMIT_USER_CREATED = 'LIMIT_USER_CREATED',
@@ -92,7 +91,6 @@ export interface UserLimitResetPayload {
   userLimitId: string;
 }
 
-// Typed event interfaces
 export interface LimitUserCreatedEvent extends BaseEvent {
   type: KinesisEventType.LIMIT_USER_CREATED;
   payload: LimitUserCreatedPayload;
@@ -128,7 +126,6 @@ export interface UserLimitResetEvent extends BaseEvent {
   payload: UserLimitResetPayload;
 }
 
-// Union type for all events
 export type Event =
   | LimitUserCreatedEvent
   | LimitUserPendingPaymentCreatedEvent
